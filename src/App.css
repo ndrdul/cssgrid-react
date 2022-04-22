@@ -15,22 +15,22 @@
 .nav {
   grid-area: nav;
   background: #FF0022;
-  padding: 1.2em;
+  padding: 1em;
 }
 .graph {
   grid-area: graph;
   background: #2E2F2F;
-  padding: 1.2em;
+  padding: 1em;
 }
 .node {
   grid-area: node;
   background: #caf7e2;
-  padding: 1.2em;
+  padding: 1em;
 }
 .footer {
   grid-area: footer;
   background: #BBBBBF;
-  padding: 1.2em;
+  padding: 1em;
 }
 
 @media all and (max-width: 575px) {
