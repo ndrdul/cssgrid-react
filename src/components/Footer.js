@@ -1,3 +1,3 @@
 export const Footer = () => {
-    return(<h4>Inside Footer</h4>)
+    return(<h5>Inside Footer</h5>)
 }    

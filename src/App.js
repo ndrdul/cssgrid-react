@@ -14,7 +14,7 @@ const BASEURL = "https://flaskrandomgraph.herokuapp.com/Barabasi"
 
 const App = () =>  {
   const [dataValue, setdataValue] = useState();
-  const [nodeN, setnodeN] = useState(40);
+  const [nodeN, setnodeN] = useState(200);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -35,14 +35,14 @@ const App = () =>  {
 
   useEffect(() => {
     getData();
-  });
+  }, []);
 
   return (
 
     <div className="grid">
-      <div className="nav"><Nav /></div>
-      <div className="graph">{dataValue ? <Graph/> : <Loading />}</div>
-      <div className="node"><Node /></div>
+      <div className="nav"><Nav dataValue={dataValue}/></div>
+      <div className="graph">{dataValue ? <Graph dataValue={dataValue} /> : <Loading />}</div>
+      <div className="node"><Node dataValue={dataValue} /></div>
       <div className="footer"><Footer /></div>
     </div>
 

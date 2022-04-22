@@ -3,8 +3,8 @@
   grid-template-areas: 
     "nav graph node"
     "footer footer footer";
-  grid-template-rows: 1fr 10%;  
-  grid-template-columns: 20% 1fr 35%;
+  grid-template-rows: 1fr 50px;  
+  grid-template-columns: 10% 1fr 35%;
   grid-row-gap: 2px;
   grid-column-gap: 2px;
   height: 100vh;
@@ -20,6 +20,7 @@
 .graph {
   grid-area: graph;
   background: #2E2F2F;
+  color: #f8f8ff;
   padding: 1em;
 }
 .node {
@@ -30,7 +31,7 @@
 .footer {
   grid-area: footer;
   background: #BBBBBF;
-  padding: 1em;
+ 
 }
 
 @media all and (max-width: 575px) {
@@ -40,7 +41,7 @@
       "graph"
       "node"
       "footer";
-    grid-template-rows: 80px 1fr 1fr 80px;  
+    grid-template-rows: 80px 1fr 1fr 50px;  
     grid-template-columns: 1fr;
  }
 }
