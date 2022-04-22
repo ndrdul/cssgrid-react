@@ -1,12 +1,42 @@
-#grid { 
+.grid { 
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: .25fr 1fr ;
-  grid-gap: .25vw;
-  }
-#grid > div {
-  font-size: 3vw;
-  padding: .25em;
-  background: gold;
-  text-align: center;
+  grid-template-areas: 
+    "nav graph node"
+    "footer footer footer";
+  grid-template-rows: 1fr 10%;  
+  grid-template-columns: 20% 1fr 35%;
+  grid-row-gap: 2px;
+  grid-column-gap: 2px;
+  height: 100vh;
+  margin: 0;
+}  
+
+
+.nav {
+  grid-area: nav;
+  background: #FF0022;
+}
+.graph {
+  grid-area: graph;
+  background: #2E2F2F;
+}
+.node {
+  grid-area: node;
+  background: #8D8E8E;
+}
+.footer {
+  grid-area: footer;
+  background: #BBBBBF;
+}
+
+@media all and (max-width: 575px) {
+  .grid { 
+    grid-template-areas: 
+      "nav"
+      "graph"
+      "node"
+      "footer";
+    grid-template-rows: 80px 1fr 1fr 80px;  
+    grid-template-columns: 1fr;
+ }
 }
